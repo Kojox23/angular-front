@@ -1,13 +1,40 @@
-{{muscle$ | async | json}}
-
-
 <div class="container">
-    <h2>Liste des étudiants</h2>
+    <h2>Liste des muscles</h2>
     <div class="flex-grow-1 p-1">
-    
-    <table></table>
+
+    <table mat-table [dataSource]="muscle$ | async" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="muscleName">
+            <th mat-header-cell *matHeaderCellDef> Muscle </th>
+            <td mat-cell *matCellDef="let element"> {{element.muscleName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="exercice">
+            <th mat-header-cell *matHeaderCellDef> Exercice </th>
+            <td mat-cell *matCellDef="let element"> {{element.exercice}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element" (click)="openMuscleForm(element); $event.stopPropagation();">
+                <mat-icon>update</mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element" (click)="delete(element.id); $event.stopPropagation();">
+                <mat-icon>delete</mat-icon>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="showMuscleDetails(row.id)"></tr>
+
+    </table>
+
     </div>
     <div class="btn-holder">
-      <button mat-fab color="warn" (click)="openMuscleForm()"><mat-icon>add</mat-icon></button>
+        <button mat-fab color="warn" (click)="openMuscleForm()"><mat-icon>add</mat-icon></button>
     </div>
-    </div>
+</div>

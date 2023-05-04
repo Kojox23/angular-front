@@ -63,7 +63,7 @@ export class MuscleListComponent implements OnInit, OnDestroy {
     const ref = this.dialog.open(GenericPopupComponent, {
       data: {
         title: 'Confirmation de suppression',
-        message: 'êtes-vous sûr de vouloir supprimer cet étudiant ?',
+        message: 'êtes-vous sûr de vouloir supprimer ce muscle ?',
         typeMessage: 'none',
         yesButtonVisible: true,
         noButtonVisible: true,

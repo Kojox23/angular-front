@@ -1,1 +1,26 @@
-<p>muscle-form works!</p>
+<h2 mat-dialog-title>{{title}}</h2>
+
+<form [formGroup]="muscleForm" (ngSubmit)="onSubmit()">
+  <div class="form">
+    <mat-form-field appearance="outline">
+      <mat-label>identifiant</mat-label>
+      <input matInput formControlName="id" readonly />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Muscle</mat-label>
+      <input matInput formControlName="muscleName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Exercice</mat-label>
+      <input matInput formControlName="exercice" />
+    </mat-form-field>
+  </div>
+
+
+  <mat-dialog-actions align="end">
+    <button mat-button type="button" mat-dialog-close>Annuler</button>
+    <button mat-raised-button type="submit" cdkFocusInitial color="warn" [disabled]="!muscleForm.valid || !muscleForm.dirty">{{submitBtnName}}</button>
+  </mat-dialog-actions>
+</form>

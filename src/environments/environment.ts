@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  iutApiBaseUrl: 'https://angular-back-five.vercel.app/',
+  iutApiBaseUrl: 'https://angular-back-five.vercel.app',
 };
