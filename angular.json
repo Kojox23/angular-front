@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "projet_muscu_front:build:production",
+            "firebaseProject": "angular-ad8c1",
+            "firebaseHostingSite": "angular-ad8c1"
+          }
         }
       }
     }

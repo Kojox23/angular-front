@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-ad8c1": {
+      "hosting": {
+        "projet_muscu_front": [
+          "angular-ad8c1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-ad8c1"
+  }
+}
