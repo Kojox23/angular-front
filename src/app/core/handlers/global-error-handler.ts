@@ -1,4 +1,4 @@
-import { GenericPopupComponent } from './../../shared/components/generic-popup.component';
+import { GenericPopupComponent } from '../../shared/components/generic-popup/generic-popup.component';
 import { ErrorHandler, Injectable, NgZone } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HttpErrorResponse } from '@angular/common/http';

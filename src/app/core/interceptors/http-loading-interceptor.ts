@@ -1,4 +1,4 @@
-import { GenericPopupComponent } from './../../shared/components/generic-popup.component';
+import { GenericPopupComponent } from '../../shared/components/generic-popup/generic-popup.component';
 import {
   HttpEvent,
   HttpHandler,
